@@ -1,0 +1,20 @@
+name: eeg-bci
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - libblas=*=*openblas  # MKL crashes on Windows when the env is not activated (e.g. Jupyter kernels)
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyter
+  - ipykernel
+  - tqdm
+  - pip
+  - pip:
+      - mne==1.13.2
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch==2.14.0

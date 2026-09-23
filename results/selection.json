@@ -1,0 +1,31 @@
+{
+  "chosen_config": "A",
+  "configs": {
+    "A": {
+      "best_epochs": 446,
+      "cv_acc_at_best": 0.7046913580246914,
+      "cv_acc_final_epoch": 0.6986882716049384,
+      "label": "8-30 Hz, 0-4 s after cue (Steps 2-3)"
+    },
+    "B": {
+      "best_epochs": 496,
+      "cv_acc_at_best": 0.6938770878721858,
+      "cv_acc_final_epoch": 0.6963734567901234,
+      "label": "8-30 Hz, 0.5-4.5 s after cue"
+    },
+    "C": {
+      "best_epochs": 492,
+      "cv_acc_at_best": 0.6732804232804233,
+      "cv_acc_final_epoch": 0.6716820987654321,
+      "label": "4-38 Hz, 0.5-4.5 s after cue"
+    },
+    "D": {
+      "best_epochs": 500,
+      "cv_acc_at_best": 0.6950676638176637,
+      "cv_acc_final_epoch": 0.6975308641975307,
+      "label": "no extra filter, -0.5-4 s, exp. moving standardization (Nzakuna et al.)"
+    }
+  },
+  "smoothing_window": 25,
+  "criterion": "max of the smoothed mean held-out-run accuracy (T session only, 9 subjects x 6 folds)"
+}
