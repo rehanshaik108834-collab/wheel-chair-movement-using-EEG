@@ -65,7 +65,18 @@ CONFIGS = {
           "label": "4-38 Hz, 0.5-4.5 s after cue"},
     "D": {"l_freq": None, "h_freq": None, "tmin": -0.5, "tmax": 4.0, "ems": True,
           "label": "no extra filter, -0.5-4 s, exp. moving standardization (Nzakuna et al.)"},
+    # Notebook 05: our option A, but with the mentor's filter type (Sreeja & Samanta, 2019)
+    "AC": {"l_freq": 8.0, "h_freq": 30.0, "tmin": 0.0, "tmax": 4.0, "ems": False, "filter": "cheby2",
+           "label": "8-30 Hz Chebyshev type II (order 6), 0-4 s after cue (mentor's filter)"},
 }
+
+CHEBY2_ORDER, CHEBY2_RS = 6, 40.0   # order from Sreeja & Samanta (2019); 40 dB stop-band (not stated in paper)
+
+
+def cheby2_sos(l_freq, h_freq, sfreq=250.0):
+    """Chebyshev type II band-pass (second-order sections). Applied forward-backward (zero phase)."""
+    from scipy.signal import cheby2
+    return cheby2(CHEBY2_ORDER, CHEBY2_RS, [l_freq, h_freq], btype="bandpass", fs=sfreq, output="sos")
 
 
 def preprocess_config(subject: str, session: str, config: str):
@@ -79,7 +90,11 @@ def preprocess_config(subject: str, session: str, config: str):
 
     cfg = CONFIGS[config]
     raw = load_raw(subject, session).pick("eeg")
-    if cfg["l_freq"] is not None:
+    if cfg["l_freq"] is not None and cfg.get("filter") == "cheby2":
+        from scipy.signal import sosfiltfilt
+        sos = cheby2_sos(cfg["l_freq"], cfg["h_freq"], raw.info["sfreq"])
+        raw.apply_function(lambda x: sosfiltfilt(sos, x, axis=-1), channel_wise=False)
+    elif cfg["l_freq"] is not None:
         raw.filter(cfg["l_freq"], cfg["h_freq"], method="fir", phase="zero", verbose="ERROR")
     if cfg["ems"]:
         raw.apply_function(lambda x: exponential_moving_standardize(x * 1e6, factor_new=1e-3,

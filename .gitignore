@@ -15,6 +15,11 @@ results/runs_smoke/
 # Console logs from experiment runs
 results/*.out
 results/runs/log.txt
+results/*/*.out
+results/*/logs/
+results/*/log.txt
+results/*_smoke/
+checkpoints_*/
 
 # Python / Jupyter
 __pycache__/

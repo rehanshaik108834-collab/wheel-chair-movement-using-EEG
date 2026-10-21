@@ -1,0 +1,1 @@
+{"best_epochs": 238, "cv_acc": 0.7175154320987653, "base_cv": {"best_epochs": 446, "cv_acc": 0.70429012345679, "cv_acc_final": 0.6948302469135803}}

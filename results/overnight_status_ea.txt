@@ -1,0 +1,15 @@
+[2026-10-14 23:19:46] OVERNIGHT RUN STARTED (plan ea, pid 37372)
+[2026-10-14 23:19:46] gpu_lane: START within_cv (attempt 1/3)
+[2026-10-14 23:41:46] gpu_lane: DONE  within_cv
+[2026-10-14 23:41:46] gpu_lane: START within_choose (attempt 1/3)
+[2026-10-14 23:42:06] gpu_lane: FAILED within_choose (exit code 3221225786); see results/ea/gpu_lane.out
+[2026-10-14 23:42:06] gpu_lane: START within_choose (attempt 2/3)
+[2026-10-14 23:42:26] gpu_lane: DONE  within_choose
+[2026-10-14 23:42:26] gpu_lane: START within_t2e (attempt 1/3)
+[2026-10-14 23:54:46] gpu_lane: DONE  within_t2e
+[2026-10-14 23:54:46] gpu_lane: START loso (attempt 1/3)
+[2026-10-15 04:39:47] gpu_lane: DONE  loso
+[2026-10-15 04:39:47] gpu_lane: ALL STEPS DONE
+[2026-10-15 04:39:47] final: START final (attempt 1/3)
+[2026-10-15 04:40:07] final: DONE  final
+[2026-10-15 04:40:07] ALL DONE - results in results/ea/summary.md
