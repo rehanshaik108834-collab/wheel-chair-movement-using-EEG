@@ -1,0 +1,36 @@
+[2026-11-10 18:50:06] OVERNIGHT RUN STARTED (plan calib, pid 45616)
+[2026-11-10 18:50:06] cpu_lane: START artifacts (attempt 1/3)
+[2026-11-10 18:50:06] gpu_lane: START export (attempt 1/3)
+[2026-11-10 18:50:26] cpu_lane: DONE  artifacts
+[2026-11-10 18:50:26] cpu_lane: ALL STEPS DONE
+[2026-11-10 18:50:46] gpu_lane: DONE  export
+[2026-11-10 18:50:46] gpu_lane: START within_cv (attempt 1/3)
+[2026-11-11 00:24:21] OVERNIGHT RUN STARTED (plan calib, pid 54592)
+[2026-11-11 00:24:21] cpu_lane: START artifacts (attempt 1/3)
+[2026-11-11 00:24:21] gpu_lane: START export (attempt 1/3)
+[2026-11-11 00:24:41] cpu_lane: DONE  artifacts
+[2026-11-11 00:24:41] cpu_lane: ALL STEPS DONE
+[2026-11-11 00:24:41] gpu_lane: DONE  export
+[2026-11-11 00:24:41] gpu_lane: START within_cv (attempt 1/3)
+[2026-11-11 00:38:43] OVERNIGHT RUN STARTED (plan calib, pid 7172)
+[2026-11-11 00:38:43] cpu_lane: START artifacts (attempt 1/3)
+[2026-11-11 00:38:43] gpu_lane: START export (attempt 1/3)
+[2026-11-11 00:39:03] gpu_lane: DONE  export
+[2026-11-11 00:39:03] gpu_lane: START within_cv (attempt 1/3)
+[2026-11-11 00:39:03] cpu_lane: DONE  artifacts
+[2026-11-11 00:39:03] cpu_lane: ALL STEPS DONE
+[2026-11-11 10:49:10] gpu_lane: WATCHDOG no output for 75 min in within_cv -> killing and retrying
+[2026-11-11 10:49:11] gpu_lane: FAILED within_cv (exit code 1); see results/stageB/gpu_lane.out
+[2026-11-11 10:49:11] gpu_lane: START within_cv (attempt 2/3)
+[2026-11-15 22:37:59] OVERNIGHT RUN STARTED (plan calib, pid 32712)
+[2026-11-15 22:37:59] cpu_lane: START artifacts (attempt 1/3)
+[2026-11-15 22:37:59] gpu_lane: START export (attempt 1/3)
+[2026-11-15 22:38:19] cpu_lane: DONE  artifacts
+[2026-11-15 22:38:19] cpu_lane: ALL STEPS DONE
+[2026-11-15 22:38:19] gpu_lane: DONE  export
+[2026-11-15 22:38:19] gpu_lane: START within_cv (attempt 1/3)
+[2026-11-16 00:16:30] gpu_lane: DONE  within_cv
+[2026-11-16 00:16:30] gpu_lane: ALL STEPS DONE
+[2026-11-16 00:16:30] final: START final (attempt 1/3)
+[2026-11-16 00:17:10] final: DONE  final
+[2026-11-16 00:17:10] ALL DONE - results in results/stageB/summary.md

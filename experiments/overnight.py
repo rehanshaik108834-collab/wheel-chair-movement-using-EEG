@@ -1,4 +1,4 @@
-"""Overnight orchestrator with watchdog for experiments/run_mentor.py (no supervision needed).
+"""Overnight orchestrator with watchdog for experiments/run_mentor.py, run_ea.py or run_calib.py (--plan mentor/ea/calib).
 
 - Runs two lanes in parallel: CPU lane (her sparse classifier) and GPU lane (EEGNet variants),
   then the final analysis.
@@ -27,6 +27,9 @@ PLANS = {
     "ea": {"script": "run_ea.py", "out": "ea", "status": "overnight_status_ea.txt",
            "cpu": [],
            "gpu": [["within_cv"], ["within_choose"], ["within_t2e"], ["loso"]]},
+    "calib": {"script": "run_calib.py", "out": "stageB", "status": "overnight_status_stageB.txt",
+              "cpu": [["artifacts"]],
+              "gpu": [["export"], ["within_cv"]]},
 }
 P = PLANS[PLAN]
 OUTDIR = ROOT / "results" / (P["out"] + ("_smoke" if SMOKE else ""))
