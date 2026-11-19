@@ -1,0 +1,18 @@
+[2026-11-16 22:34:11] PART 1 RUN STARTED (pid 40836)
+[2026-11-16 22:34:11] lane1: START cv --variants BASE FTDB AUGNS --seeds 0 (attempt 1/3)
+[2026-11-16 22:34:11] lane2: START cv --variants AUGSR RECIPE --seeds 0 (attempt 1/3)
+[2026-11-16 22:34:11] lane3: START cv --variants PREPD CLEAN --seeds 0 (attempt 1/3)
+[2026-11-17 01:30:02] lane3: DONE  cv --variants PREPD CLEAN --seeds 0
+[2026-11-17 01:43:42] lane2: DONE  cv --variants AUGSR RECIPE --seeds 0
+[2026-11-17 02:08:22] lane1: DONE  cv --variants BASE FTDB AUGNS --seeds 0
+[2026-11-17 02:08:22] decide: START summary (attempt 1/3)
+[2026-11-17 02:08:42] decide: DONE  summary
+[2026-11-17 02:08:42] DECISION kept ideas (>= +0.5 on T-CV): ['AUGSR']
+[2026-11-17 02:08:42] DECISION final variant: AUGSR (T-CV 75.15% at epoch 290; BASE 72.25%)
+[2026-11-17 02:08:42] final1: START t2e --variants AUGSR --seeds 0 2 4 (attempt 1/3)
+[2026-11-17 02:08:42] final2: START t2e --variants AUGSR --seeds 1 3 (attempt 1/3)
+[2026-11-17 02:23:42] final2: DONE  t2e --variants AUGSR --seeds 1 3
+[2026-11-17 02:28:02] final1: DONE  t2e --variants AUGSR --seeds 0 2 4
+[2026-11-17 02:28:02] decide: START t2e_summary (attempt 1/3)
+[2026-11-17 02:28:22] decide: DONE  t2e_summary
+[2026-11-17 02:28:22] ALL DONE - results in results/improve/cv_summary.md and t2e_summary.md
