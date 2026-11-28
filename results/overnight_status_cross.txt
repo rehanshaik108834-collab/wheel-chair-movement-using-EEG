@@ -1,0 +1,15 @@
+[2026-11-19 13:31:28] B4-B6 CROSS-SUBJECT STARTED (pid 20076)
+[2026-11-19 13:31:28] lane1: START run_cross.py train --subjects A01 A04 A07 (attempt 1/3)
+[2026-11-19 13:31:28] lane2: START run_cross.py train --subjects A02 A05 A08 (attempt 1/3)
+[2026-11-19 13:31:28] lane3: START run_cross.py train --subjects A03 A06 A09 (attempt 1/3)
+[2026-11-19 14:31:51] lane2: WATCHDOG no output for 60 min -> killing and retrying
+[2026-11-19 14:31:51] lane2: FAILED run_cross.py train --subjects A02 A05 A08 (exit 1); see results/stageB_aug/lane2.out
+[2026-11-19 14:31:51] lane2: START run_cross.py train --subjects A02 A05 A08 (attempt 2/3)
+[2026-11-19 16:38:11] lane1: DONE  run_cross.py train --subjects A01 A04 A07
+[2026-11-19 16:49:32] lane3: DONE  run_cross.py train --subjects A03 A06 A09
+[2026-11-19 17:00:13] lane2: DONE  run_cross.py train --subjects A02 A05 A08
+[2026-11-19 17:00:13] lane1: START run_cross.py adapt (attempt 1/3)
+[2026-11-19 17:01:13] lane1: DONE  run_cross.py adapt
+[2026-11-19 17:01:13] lane1: START run_cross.py final (attempt 1/3)
+[2026-11-19 17:01:33] lane1: DONE  run_cross.py final
+[2026-11-19 17:01:33] ALL DONE - results in results/cross/summary.md
